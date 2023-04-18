@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.notes-list{
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fit, min-max( 250px, 1fr));
+}
+.note {
+  background-color: rgba(248, 248, 43, 0.959);
+ 
+  border-radius: 10px;
+  padding: 5px;
+  min-height: 170px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+note-footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+

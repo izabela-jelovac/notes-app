@@ -1,5 +1,6 @@
 import "./App.css";
-import Notes from "./Notes";
+import Note from "./Note";
+import NotesList from "./NotesList";
 function App() {
   const handleClick = (event) => {
     console.log("Click");
@@ -13,7 +14,8 @@ function App() {
       >
         +create new note
       </button>
-      <Notes></Notes>
+      <NotesList></NotesList>
+      <Note></Note>
     </div>
   );
 }
