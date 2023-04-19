@@ -1,9 +1,9 @@
-function Note() {
+function Note(id, text, date) {
   return (
     <div className="note">
-      <span>Hello! This is my first note!</span>
+      <span>{text}</span>
       <div className="note-footer">
-        <small>Datum posljednje izmjene:</small>
+        <small>Datum posljednje izmjene:{date}</small>
       </div>
     </div>
   );
