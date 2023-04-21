@@ -7,7 +7,7 @@ function App() {
   const[notes, setNotes] = useState([{
     id: nanoid(),
     text: "This is my first note!"
-  date: "13/04/2023"
+date: "13/04/2023"
   }
 {
     id: nanoid()
@@ -28,7 +28,7 @@ function App() {
     console.log("Click");
   };
   return (
-    <div className="App">
+    <div className="container">
       <button
         className="button-create-new-note"
         type="button"
