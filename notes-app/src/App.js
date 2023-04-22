@@ -27,6 +27,9 @@ date: "13/04/2023"
   const handleClick = (event) => {
     console.log("Click");
   };
+  const addNote = (text)=>{
+    console.log(text)
+  }
   return (
     <div className="container">
       <button
@@ -36,7 +39,7 @@ date: "13/04/2023"
       >
         +create new note
       </button>
-      <NotesList notes={notes}/>
+      <NotesList notes={notes} handleAddNote={addNote}/>
       <Note/>
     </div>
   );
