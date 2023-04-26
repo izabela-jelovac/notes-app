@@ -13,6 +13,7 @@ const AddNote = ({ handleAddNote }) => {
       text: text,
       date: date.toLocaleDateString(),
     };
+    const newNotes = [];
   };
   return (
     <div className="note new">

@@ -28,7 +28,14 @@ date: "13/04/2023"
     console.log("Click");
   };
   const addNote = (text)=>{
-    console.log(text)
+    const date= new Date();
+const newNote={
+  id: nanoid,
+  text: text,
+  date: date.toLocaleDateString()
+}
+const newNotes=[...notes,newNotes]
+setNotes(newNotes)
   }
   return (
     <div className="container">
