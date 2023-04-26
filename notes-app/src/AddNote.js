@@ -7,6 +7,13 @@ const AddNote = ({ handleAddNote }) => {
   const handleSaveClick = () => {
     handleAddNote(noteText);
   };
+  const addNote = (text) => {
+    const date = new Date();
+    const newNote = {
+      text: text,
+      date: date.toLocaleDateString(),
+    };
+  };
   return (
     <div className="note new">
       <textarea
