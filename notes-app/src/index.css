@@ -66,5 +66,19 @@ note-footer{
 .delete-icon{
   cursor: pointer;
 }
+.search{
+  display: flex;
+  align-items: center;
+  background-color: beige;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 1.5em;
 
-
+}
+.search input{
+  border: none;
+  background-color: beige;
+}
+.search input:focus{
+outline: none;
+}
