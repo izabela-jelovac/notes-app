@@ -37,6 +37,10 @@ const newNote={
 const newNotes=[...notes,newNotes]
 setNotes(newNotes)
   }
+  const deleteNote = (id)=>{
+    const newNotes=notes.filter((note)=>note.id !==id);
+    setNotes(newNotes);
+  }
   return (
     <div className="container">
       <button
@@ -46,7 +50,7 @@ setNotes(newNotes)
       >
         +create new note
       </button>
-      <NotesList notes={notes} handleAddNote={addNote}/>
+      <NotesList notes={notes} handleAddNote={addNote} handleDeleteNote={deleteNote} />
       <Note/>
     </div>
   );
