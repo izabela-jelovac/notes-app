@@ -4,6 +4,7 @@ import NotesList from "./NotesList";
 import {nanoid} from 'nanoid';
 import {useState} from 'react';
 import Search from "./Search";
+import Header from "./Header";
 function App() {
   const[notes, setNotes] = useState([{
     id: nanoid(),
@@ -45,6 +46,7 @@ setNotes(newNotes)
   }
   return (
     <div className="container">
+      <Header/>
       <Search handleSearchNote={setSearchText}/>
       <button
         className="button-create-new-note"
