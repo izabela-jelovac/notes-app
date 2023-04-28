@@ -28,6 +28,7 @@ date: "13/04/2023"
   const handleClick = (event) => {
     console.log("Click");
   };
+  const[searchText, setSearchText]=useState("");
   const addNote = (text)=>{
     const date= new Date();
 const newNote={
@@ -44,7 +45,7 @@ setNotes(newNotes)
   }
   return (
     <div className="container">
-      <Search/>
+      <Search handleSearchNote={setSearchText}/>
       <button
         className="button-create-new-note"
         type="button"
@@ -52,7 +53,7 @@ setNotes(newNotes)
       >
         +create new note
       </button>
-      <NotesList notes={notes} handleAddNote={addNote} handleDeleteNote={deleteNote} />
+      <NotesList notes={notes.filter((note)=>note.text.toLowerCase().includes(searchText))} handleAddNote={addNote} handleDeleteNote={deleteNote} />
       <Note/>
     </div>
   );
