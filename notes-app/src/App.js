@@ -30,6 +30,7 @@ date: "13/04/2023"
     console.log("Click");
   };
   const[searchText, setSearchText]=useState("");
+  const[darkMode, setDarkMode]=useState(false)
   const addNote = (text)=>{
     const date= new Date();
 const newNote={
@@ -45,8 +46,9 @@ setNotes(newNotes)
     setNotes(newNotes);
   }
   return (
+    <div className={'${darkMode && 'dark-mode'}'}>
     <div className="container">
-      <Header/>
+      <Header handleToggleDarkMode={setDarkMode}/>
       <Search handleSearchNote={setSearchText}/>
       <button
         className="button-create-new-note"
@@ -57,6 +59,7 @@ setNotes(newNotes)
       </button>
       <NotesList notes={notes.filter((note)=>note.text.toLowerCase().includes(searchText))} handleAddNote={addNote} handleDeleteNote={deleteNote} />
       <Note/>
+    </div>
     </div>
   );
 }
